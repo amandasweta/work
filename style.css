@@ -17,9 +17,14 @@
     }
 
     .logo {
-        font-family: "Thasadith", sans-serif;
-        letter-spacing: 4.5px;
+
+        letter-spacing: 2.5px;
     }
+h{
+     font-family: "Annie Use Your Telescope", cursive;
+    font-size: 23px;
+    font-weight: bold;
+}
 
     nav ul {
       list-style: none;
@@ -138,8 +143,8 @@ intro2{
 
 }
 .about-me h2 {
-  font-family: "Limelight", sans-serif;
-      font-weight: bold;
+    font-family: "Limelight", sans-serif;
+    font-weight: bold;
     font-size: 80px;
     color: #191970;
 }
@@ -149,16 +154,16 @@ intro2{
 .about-me .about-content p {
   font-size: 22px;
   line-height: 1.6;
-     text-align:left;
-    font-family: "Thasadith", sans-serif;
-    letter-spacing: 2.5px;
+  text-align:left;
+  font-family: "Gowun Dodum", sans-serif;
+  letter-spacing: 1.5px;
 }
 .profile-image {
   display: block;
   margin: 0 auto;
   width: 500px;
   margin-top: 20px;
-    padding: 30px;
+  padding: 30px;
 }
 .about-container {
   display: flex;
@@ -175,39 +180,32 @@ intro2{
 .timeline {
   padding-left: 20px;
 }
-
 .timeline-item {
   display: flex;
   margin-bottom: 20px;
-    font-size: 13px;
-    font-family: "Thasadith", sans-serif;
+  font-size: 13px;
+  font-family: "Gowun Dodum", sans-serif;
 }
 .timeline-date {
   width: 120px;
-  font-weight: bold;
 }
-
 .timeline-content {
   margin-left: 20px;
 }
-
 .timeline-content h3 {
   margin-top: 0;
-  font-family: "Thasadith", sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
 }
-
 .skill {
   margin-top: 20px;
-     font-family: "Thasadith", sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
 }
-
 .progress {
   background-color: #FFF3E0;
   height: 20px;
   margin-bottom: 10px;
     border-radius: 5px; /* Add some rounded corners */
 }
-
 .progress-bar {
   background-color: #191970;
   color: #fff;
