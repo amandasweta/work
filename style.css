@@ -21,8 +21,8 @@
         letter-spacing: 2.5px;
     }
 h{
-     font-family: "Annie Use Your Telescope", cursive;
-    font-size: 23px;
+     font-family: "Lacquer", system-ui;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -353,10 +353,3 @@ intro2{
 /* Adjust position of next button */
 .nextt {
   right: 0;
-}
-
-
-
-
-
-
