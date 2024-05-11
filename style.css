@@ -1,0 +1,364 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+        opacity: 0; /* Initially hide the section */
+        animation: appear 0.5s ease-out forwards; /* Apply animation */
+  /* Change the delay to stagger the appearance of sections */
+         font-family: "Thasadith", sans-serif;
+        letter-spacing: 3.5px;
+}
+    }
+
+    .logo {
+        font-family: "Thasadith", sans-serif;
+        letter-spacing: 4.5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+      
+      intro hh{
+      font-size: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh; 
+      font-family: "Limelight", sans-serif;
+      font-weight: bold;
+      color:#4682B4;
+      height: 30vh;
+      margin-top:20px;
+      }
+
+intro2{
+      font-size: 130px;
+      display: flex;
+      justify-content: left;
+      margin-top: 40px;
+      padding-left: 60px;
+      height: 40vh; 
+       font-family: "Limelight", sans-serif;
+      font-weight: bold;
+          color:#191970;
+      }
+      .about-section {
+  padding: 30px 0; /* Adjust padding as needed */
+  background-color: #fff; /* Background color for the section */
+}
+
+.about-section .container {
+  display: flex;
+  align-items: center;
+}
+
+.about-section .image-column {
+  flex: 1;
+  padding: 0 20px; /* Adjust padding as needed */
+}
+
+.about-section .bio-column {
+  flex: 2;
+  padding: 0 20px; /* Adjust padding as needed */
+}
+
+.about-section img {
+  max-width: 100%; /* Ensure image doesn't exceed column width */
+}
+
+.about-section h2 {
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.about-section p {
+  font-size: 16px; /* Adjust font size as needed */
+  line-height: 1.5; /* Adjust line height as needed */
+}
+.portfolio {
+  margin-top: -180px;
+    padding: 100px;
+
+}
+.project {
+  background:none;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse; /* Reverse the order of flex items */
+    padding-bottom: 400px;
+}
+.project2 {
+  background:none;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse; /* Reverse the order of flex items */
+     padding-bottom: 400px;
+}
+.image {
+  flex: 1;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  flex: 1;
+  padding: 20px;
+}
+
+.info h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #4682B4;
+}
+.info p {
+  margin-bottom: 0;
+}
+.about-me .container {
+  max-width: 1400px;
+  margin: 0 auto;
+    padding: 100px;
+    padding-bottom: 200px;
+
+}
+.about-me h2 {
+  font-family: "Limelight", sans-serif;
+      font-weight: bold;
+    font-size: 80px;
+    color: #191970;
+}
+.about-me .about-content {
+  margin-top: 20px;
+}
+.about-me .about-content p {
+  font-size: 22px;
+  line-height: 1.6;
+     text-align:left;
+    font-family: "Thasadith", sans-serif;
+    letter-spacing: 2.5px;
+}
+.profile-image {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  margin-top: 20px;
+    padding: 30px;
+}
+.about-container {
+  display: flex;
+}
+.about-column {
+  flex: 1;
+}
+.about-content {
+  margin-top: 20px;
+}
+.about-column h2 {
+  margin-top: 0;
+}
+.timeline {
+  padding-left: 20px;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 20px;
+    font-size: 13px;
+    font-family: "Thasadith", sans-serif;
+}
+.timeline-date {
+  width: 120px;
+  font-weight: bold;
+}
+
+.timeline-content {
+  margin-left: 20px;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-family: "Thasadith", sans-serif;
+}
+
+.skill {
+  margin-top: 20px;
+     font-family: "Thasadith", sans-serif;
+}
+
+.progress {
+  background-color: #FFF3E0;
+  height: 20px;
+  margin-bottom: 10px;
+    border-radius: 5px; /* Add some rounded corners */
+}
+
+.progress-bar {
+  background-color: #191970;
+  color: #fff;
+  height: 100%;
+  line-height: 20px;
+  text-align: center;
+  width: 100%; /* Make progress bars fill the container */
+  border-radius: 5px; /* Add some rounded corners */
+}
+
+.container.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-column {
+  flex: 1;
+  margin-right: 20px; /* Add some space between columns */
+}
+
+.about-column:last-child {
+  margin-right: 0; /* Remove margin from the last column */
+}
+ .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: #E3F2FD  ;
+      color: #880E4F;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #fff transparent transparent transparent;
+    }
+
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.button {
+  display: inline-block;
+  background-color: #4682B4;
+  border: 1px solid #FFF3E0;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 15px;
+  text-align: center;
+    margin-left: 620px;
+    transition: 1s;
+}
+
+.button:hover {
+    color:#4682B4;
+    background-color: #FFF3E0;
+}
+/* Container for the carousel */
+.portfolio2-carousel {
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Container for the portfolio items */
+.portfolio2-items {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Individual portfolio item */
+.portfolio2-item {
+  flex: 0 0 auto;
+  margin-right: 20px; /* Adjust spacing between items */
+}
+
+/* Styling for the images */
+.portfolio2-item img {
+  width: 400px; /* Set width of image */
+  height: 240px; /* Set height of image */
+}
+
+/* Styling for the carousel navigation buttons */
+.prevv,
+.nextt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prevv:hover,
+.nextt:hover {
+  background-color: #555; /* Button hover background color */
+}
+
+/* Adjust position of previous button */
+.prevv {
+  left: 0;
+}
+
+/* Adjust position of next button */
+.nextt {
+  right: 0;
+}
+
+
+
+
+
+

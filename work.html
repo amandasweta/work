@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="https://kit.fontawesome.com/c42bd705fb.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="style.css">
+   
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Anek+Malayalam:wght@100..800&family=Black+Han+Sans&family=Dela+Gothic+One&family=Flamenco:wght@300;400&family=Fredericka+the+Great&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Hammersmith+One&family=Honk&family=Jaldi:wght@400;700&family=Limelight&family=Love+Ya+Like+A+Sister&family=Mako&family=Pompiere&family=Rammetto+One&family=Rubik+Scribble&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Yeseva+One&display=swap" rel="stylesheet">
+   
+    <title>work page</title>
+
+</head>
+
+<body>
+ 
+<Style> 
+      
+      body {
+           font-family: 'Arial', sans-serif;
+           background-color:#4682B4;
+           color: #FFF3E0;
+           }
+    header {
+      padding: 20px;
+      color: #FFF3E0;
+      padding: 40px;
+         position: fixed;
+        margin-top: 0px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999; /* Ensures the header is above other content */
+    }
+    a{
+    text-decoration: none;
+    color: #FFF3E0;
+}
+    h1{
+        text-align-last: right;
+        font-size: 35px;
+         font-family: "Thasadith", sans-serif;
+        letter-spacing: 3.5px;
+        font-weight: bold;
+        color: #191970;
+        
+    
+    }
+    p1{
+        text-align-last: right;
+        font-size: 15px;
+         font-family: "Thasadith", sans-serif;
+        letter-spacing: 3.5px;
+        font-weight: bold;
+        color: #191970;
+        opacity: 0; /* Initially hide the section */
+  animation: appear 0.5s ease-out forwards; /* Apply animation */
+  /* Change the delay to stagger the appearance of sections */
+    
+    }
+
+nav ul li a {
+  color: #FFF3E0;
+  text-decoration: none;
+  font-family: "Thasadith", sans-serif;
+  letter-spacing: 3.5px;
+  position: relative; /* Added for positioning the pseudo-elements */
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0; /* Initial width set to 0 */
+  height: 1px; /* Adjust this value based on your line thickness */
+  background-color: transparent; /* Initial state of the lines */
+  transition: width 0.3s ease; /* Transition for the line width */
+}
+
+nav ul li a::before {
+  bottom: -2px; /* Adjust this value based on your underline thickness */
+}
+
+nav ul li a::after {
+  top: -2px; /* Adjust this value based on your overline thickness */
+  right: 0; /* Start position from the right */
+}
+
+nav ul li a:hover::before {
+  width: 100%; /* Expand the width to 100% on hover */
+  background-color:#FFF3E0;
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Expand the width to 100% on hover */
+  background-color: #FFF3E0;
+}
+
+
+  .social-icons {
+      display: flex;
+    }
+
+    .social-icons .icon {
+      margin-right: 10px;
+      border-radius: 50%; /* Makes the icons circular */
+      padding: 10px; /* Adjust padding as needed */
+      color: #fff;
+      transition: transform 0.6s ease; /* Add transition for transform */
+    }
+      .social-icons .icon:hover {
+       transform: scale(1.5); /* Enlarge the icon on hover */
+    }
+    hr{
+    color: #FFF3E0;
+    width: 90%;
+  margin: 0 auto; /* Center the hr horizontally */
+}
+     footer {
+          font-family: "Thasadith", sans-serif;
+         letter-spacing: 1.5px;
+          font-weight: bold;
+        text-align-last: center;
+  background:none;
+  color: #FFF3E0;
+  padding: 40px;
+        padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column h4 {
+  margin-top: 0;
+}
+
+.footer-column p {
+  margin-bottom: 5px;
+    }
+    .footer-column:hover {
+  transform: scale(1.1); /* Enlarge the footer content on hover */
+        transition: 1s;
+        cursor: pointer;
+}
+    .footer-column:hover {
+    transform: scale(1.2); /* Enlarge the footer content on hover */
+  }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1fr; /* Display videos in a single column */
+      gap: 40px;
+      text-align-last: center;
+}
+    .portfolio-item {
+      padding: 10px;
+      background:none;
+      text-align-last: center;
+        
+    }
+     .portfolio-carousel {
+       position: relative;
+       overflow: hidden;
+}
+
+.portfolio-items {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  width: 100%; /* Ensure each video takes up the full width */
+}
+
+  button.prev,
+  button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  button.prev {
+    left: 0;
+  }
+
+  button.next {
+    right: 0;
+  }
+       .portfolio-item iframe {
+    width: 800px;
+    height: 450px;
+         
+}
+    .spotify{
+        padding-left: 250px;
+       
+    }
+    .vrl{
+        width: 450px;
+        display: block; /* Ensures the image behaves as a block element */
+        margin: 0 auto; /* Sets left and right margins to auto, which centers the image */
+    }
+    
+    
+</Style>
+  <header>
+    <div class="container">
+      <div class="logo">
+       <a href ="index.html">
+        AMANDA SWETA
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="work.html">WORK</a></li>
+          <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/amandaswetaaa/" class="icon instagram"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/amandaswetaaa/" class="icon linkedin"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://open.spotify.com/artist/3bJdp86yrrF60a2qDZcX6H?si=fs_picUdSw6p8YF-tN-aCQ" class="icon spotify"><i class="fa-brands fa-spotify"></i></a>
+        <a href="https://dreamingsoul.bandcamp.com" class="icon bandcamp"><i class="fa-brands fa-bandcamp"></i></a>
+      </div>
+    </div>
+  </header>
+  
+  <br><br><br><br><br><br><br><br><br><br>
+  
+  <intro2>
+      MY WORK
+  </intro2>
+  <br><br><br><br><br><br><br><br><br><br>
+  <section class="portfolio">
+  
+  
+  <h1>Sound Design</h1>
+  <br><br><br>
+  <div class="portfolio-carousel">
+    <div class="portfolio-items">
+      <div class="portfolio-item">
+    <h3>Thief Animated video Sound Re-design</h3>
+    <iframe src="https://www.youtube.com/embed/IQndMouZe5U" frameborder="0" allowfullscreen></iframe>
+      </div>
+       <div class="portfolio-item">
+        <h3>Ring Movie Clip Sound Re-design</h3>
+        <iframe src="https://www.youtube.com/embed/toi2NphfOuc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="portfolio-item">
+    <h3>Soundscape 1</h3>
+    <iframe src="https://www.youtube.com/embed/jAtEG9Br70o" frameborder="0" allowfullscreen></iframe>
+     </div>
+      <div class="portfolio-item">
+        <h3>Gothic Ambience</h3>
+        <iframe src="https://www.youtube.com/embed/eYRMYRoOTto" frameborder="0" allowfullscreen></iframe>
+      </div>
+      
+
+      <!-- Add more portfolio items as needed -->
+    </div>
+    <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+    <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+  </div>
+  
+  
+  
+  <br><br> <br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br>
+  <h1>Personal Project</h1>
+  <a href="https://dreamingsoul.bandcamp.com">
+  <p1>'Dreaming SouL' lofi artist</p1>
+      </a>
+  
+<br><br><br><br><br><br><br><br>
+  <div class="spotify">
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3bJdp86yrrF60a2qDZcX6H?utm_source=generator" width="70%" height="460" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+  
+   <br><br> <br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br><br><br><br><br>
+  <h1>NIME Course Project </h1>
+  <a href="https://thatsmyshadow.wixsite.com/rec-voice-looper">
+  <p1>VRL-Max Msp Interactive System <em>(view info)</em></p1>
+  </a>
+  
+  
+<br><br><br><br><br><br>
+ <a href="https://thatsmyshadow.wixsite.com/rec-voice-looper">
+ <img src="images/vrl.png" alt="Max Msp Interactive System" class=vrl>
+      </a>
+      
+      
+<br><br> <br><br><br><br><br><br><br><br><br><hr><br><br><br><br> 
+      
+       <h1>Web Design</h1>
+           <p1>Here are some of the websites I designed using HTML and CSS </p1>
+      
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="portfolio2-carousel">
+  <div class="portfolio2-items">
+   <div class="portfolio2-item">
+     <a href="https://dreamingsoul.github.io/uk/">
+      <img src="images/image6.png" alt="Image 6">
+      </a>
+    </div>
+    
+    <div class="portfolio2-item">
+     <a href="https://dreamingsoul.github.io/music/">
+      <img src="images/image1.png" alt="Image 1">
+      </a>
+    </div>
+    
+    <div class="portfolio2-item">
+     <a href="https://chillin1313.github.io/chillin/">
+      <img src="images/image2.png" alt="Image 2">
+      </a>
+    </div>
+    
+    <div class="portfolio2-item">
+     <a href="https://dreamingsoul.github.io/mylinks/">
+      <img src="images/image3.png" alt="Image 3">
+      </a>
+    </div>
+    
+    <div class="portfolio2-item">
+     <a href="https://amandasweta.github.io/.uk/">
+      <img src="images/image4.png" alt="Image 4">
+      </a>
+    </div>
+    
+    <div class="portfolio2-item">
+     <a href="https://dreamingsoul.github.io/ds/">
+      <img src="images/image5.png" alt="Image 5">
+      </a>
+    </div>
+    
+    <div class="portfolio2-item">
+     <a href="https://amandadsouzaaa.github.io/asd/">
+      <img src="images/image7.png" alt="Image 5">
+        </a>
+    </div>
+    
+     <div class="portfolio2-item">
+     <a href="https://dreamingsoul.github.io/store/">
+      <img src="images/image8.png" alt="Image 5">
+      </a>
+    </div>
+    
+  </div>
+  <button class="prevv">&#10094;</button>
+  <button class="nextt">&#10095;</button>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<script>
+  let currentIndex = 0;
+  const items = document.querySelectorAll('.portfolio2-item');
+  const totalItems = items.length;
+  const carousel = document.querySelector('.portfolio2-items');
+
+  function moveCarousel(direction) {
+    currentIndex = (currentIndex + direction) % totalItems;
+    if (currentIndex < 0) {
+      currentIndex = totalItems - 1;
+    }
+    const newPosition = -currentIndex * items[0].offsetWidth;
+    carousel.style.transform = `translateX(${newPosition}px)`;
+  }
+
+  document.querySelector('.prevv').addEventListener('click', () => moveCarousel(-1));
+  document.querySelector('.nextt').addEventListener('click', () => moveCarousel(1));
+</script>
+
+<script>
+  // JavaScript for the first carousel
+  let currentIndex1 = 0;
+  const items1 = document.querySelector('.portfolio-items');
+  const totalItems1 = items1.querySelectorAll('.portfolio-item').length;
+
+  function moveCarousel1(direction) {
+    currentIndex1 = (currentIndex1 + direction + totalItems1) % totalItems1;
+    const itemWidth1 = items1.querySelector('.portfolio-item').clientWidth;
+    items1.style.transform = `translateX(${-currentIndex1 * itemWidth1}px)`;
+  }
+
+  // JavaScript for the second carousel
+  let currentIndex2 = 0;
+  const items2 = document.querySelector('.portfolio2-items');
+  const totalItems2 = items2.querySelectorAll('.portfolio2-item').length;
+
+  function moveCarousel2(direction) {
+    currentIndex2 = (currentIndex2 + direction + totalItems2) % totalItems2;
+    const itemWidth2 = items2.querySelector('.portfolio2-item').clientWidth;
+    items2.style.transform = `translateX(${-currentIndex2 * itemWidth2}px)`;
+  }
+
+  // Event listeners for the prev and next buttons of the first carousel
+  document.querySelector('.prev').addEventListener('click', () => moveCarousel1(-1));
+  document.querySelector('.next').addEventListener('click', () => moveCarousel1(1));
+
+  // Event listeners for the prev and next buttons of the second carousel
+  document.querySelector('.prevv').addEventListener('click', () => moveCarousel2(-1));
+  document.querySelector('.nextt').addEventListener('click', () => moveCarousel2(1));
+</script>
+
+
+
+
+
+
+
+
+
+  
+</section>
+  
+  <hr>
+ <footer>
+  <div class="footer-column" id="contact">
+   <a href="https://www.google.com/maps/search/?api=1&query=B24+8PP%2C+Birmingham+UK" target="_blank">
+    <p>B24 8PP, Birmingham UK</p>
+  </a>
+  </div>
+  <div class="footer-column">
+    <div class="popup" onclick="myFunction()">
+            <img src ="images/rotary-phone.png" width=30px>
+            <span class="popuptext" id="myPopup">+44 7424305344</span>
+          </div>
+  </div>
+  <div class="footer-column">
+    <a href="mailto:amandasweta@gmail.com">
+            <img src="images/mail.png" alt="Email Icon" width=30px>
+          </a>
+  </div>
+    <div class="footer-column">
+   <a href="index.html">
+    <p>&copy; 2024 Amanda Sweta</p>
+    </a>
+  </div>
+</footer>
+  
+  <script>
+      // When the user clicks on <div>, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+    </script>
+    
+  <script>
+  let currentIndex = 0;
+  const items = document.querySelector('.portfolio-items');
+  const totalItems = items.querySelectorAll('.portfolio-item').length;
+
+  function moveCarousel(direction) {
+    currentIndex = (currentIndex + direction + totalItems) % totalItems;
+    const itemWidth = items.querySelector('.portfolio-item').clientWidth;
+    items.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+  }
+</script>
+<script>
+    // JavaScript to change navbar color on scroll
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 0) {
+        header.style.backgroundColor = '#000'; // Change to black background
+      } else {
+        header.style.backgroundColor = 'transparent'; // Revert to transparent background
+      }
+    });
+  </script>
+
+
+
+</body>
+</html>

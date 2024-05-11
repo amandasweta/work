@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script src="https://kit.fontawesome.com/c42bd705fb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Anek+Malayalam:wght@100..800&family=Black+Han+Sans&family=Dela+Gothic+One&family=Flamenco:wght@300;400&family=Fredericka+the+Great&family=Gaegu&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Hammersmith+One&family=Honk&family=Jaldi:wght@400;700&family=Limelight&family=Love+Ya+Like+A+Sister&family=Mako&family=Pompiere&family=Rammetto+One&family=Rubik+Scribble&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Yeseva+One&display=swap" rel="stylesheet">
+  <title>About Page</title>
+  <style> 
+    body {
+      background-color: #4682B4;
+      color: #FFF3E0;
+    }
+    
+       header {
+      padding: 20px;
+      color: #FFF3E0;
+      padding: 40px;
+         position: fixed;
+        margin-top: 0px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999; /* Ensures the header is above other content */
+    }
+    
+    nav ul li a {
+      color: #FFF3E0;
+      text-decoration: none;
+      font-family: "Thasadith", sans-serif;
+      letter-spacing: 3.5px;
+      position: relative; /* Added for positioning the pseudo-elements */
+    }
+
+    nav ul li a::before,
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 0; /* Initial width set to 0 */
+      height: 1px; /* Adjust this value based on your line thickness */
+      background-color: transparent; /* Initial state of the lines */
+      transition: width 0.3s ease; /* Transition for the line width */
+    }
+
+    nav ul li a::before {
+      bottom: -2px; /* Adjust this value based on your underline thickness */
+    }
+
+    nav ul li a::after {
+      top: -2px; /* Adjust this value based on your overline thickness */
+      right: 0; /* Start position from the right */
+    }
+
+    nav ul li a:hover::before {
+      width: 100%; /* Expand the width to 100% on hover */
+      background-color:#FFF3E0;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%; /* Expand the width to 100% on hover */
+      background-color: #FFF3E0;
+    }
+
+    .social-icons {
+      display: flex;
+    }
+
+    .social-icons .icon {
+      margin-right: 10px;
+      border-radius: 50%; /* Makes the icons circular */
+      padding: 10px; /* Adjust padding as needed */
+      color: #fff;
+      transition: transform 0.6s ease; /* Add transition for transform */
+    }
+
+    .social-icons .icon:hover {
+      transform: scale(1.5); /* Enlarge the icon on hover */
+    }
+
+    hr {
+      color: #FFF3E0;
+      width: 90%;
+      margin: 0 auto; /* Center the hr horizontally */
+    }
+    footer {
+      font-family: "Thasadith", sans-serif;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      text-align-last: center;
+      background: none;
+      color: #FFF3E0;
+      padding: 40px;
+      padding-left: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-column {
+      flex: 1;
+    }
+
+    .footer-column h4 {
+      margin-top: 0;
+    }
+
+    .footer-column p {
+      margin-bottom: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #FFF3E0;
+    }
+      .footer-column p {
+  margin-bottom: 5px;
+    }
+    .footer-column:hover {
+  transform: scale(1.1); /* Enlarge the footer content on hover */
+        transition: 1s;
+        cursor: pointer;
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href ="index.html">AMANDA SWETA</a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/amandaswetaaa/" class="icon instagram"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/amandaswetaaa/" class="icon linkedin"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://open.spotify.com/artist/3bJdp86yrrF60a2qDZcX6H?si=fs_picUdSw6p8YF-tN-aCQ" class="icon spotify"><i class="fa-brands fa-spotify"></i></a>
+      <a href="https://dreamingsoul.bandcamp.com" class="icon bandcamp"><i class="fa-brands fa-bandcamp"></i></a>
+    </div>
+  </div>
+</header>
+
+<section class="about-me">
+  <div class="container">
+    <img src="images/image1.jpg" alt="" class="profile-image">
+  </div>
+ 
+  <div class="container about-container">
+    <div class="about-column">
+      <h2>About Me</h2>
+    </div>
+    <div class="about-column">
+      <div class="about-content">
+        <p>Based in Birmingham, I'm a freelance sound designer and audio editor eager to contribute to audio projects. My capabilities include proficient sound design in multimedia productions, adept mixing of soundtracks, and a strong understanding of music composition, enhanced by my background as a musician. I also love creating new and interesting soundscapes. Would love to assist on production processes and bring value to your projects!</p> 
+      </div>
+    </div>
+  </div>
+
+  <div class="container about-container">
+    <div class="about-column">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2019 - 2023</div>
+          <div class="timeline-content">
+            <h3>BSc.(Hons) Music Technology</h3>
+            <p>Birmingham City University, UK</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2016 - 2019</div>
+          <div class="timeline-content">
+            <h3>Science Stream</h3>
+            <p>Fr. Agnel Multipurpose Higher Secondary School, Goa</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2012 - 2016</div>
+          <div class="timeline-content">
+            <h3>Secondary School</h3>
+            <p>Fr. Agnel Multipurpose High School, Goa</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2008 - 2012</div>
+          <div class="timeline-content">
+            <h3>Primary School</h3>
+            <p>Marina English High School, Goa</p>
+          </div>
+        </div>  
+        <div class="timeline-item">
+          <div class="timeline-date">2006 - 2008</div>
+          <div class="timeline-content">
+            <h3>Kindergarten</h3>
+            <p>Fr. Agnel Multipurpose K.G., Goa</p>
+          </div>
+        </div>     
+      </div>
+    </div>
+    
+    <div class="about-column">
+      <h2>Education</h2>
+    </div>
+  </div>
+
+
+<br><br>
+  <div class="container about-container">
+    <div class="about-column">
+      <h2>Skills</h2>
+    </div>
+    <div class="about-column">
+      <div class="skill">
+        <p>Ableton Live</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 95%;">Expert</div>
+        </div>
+        <p>Pro Tools</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 90%;">Expert</div>
+        </div>
+        <p>Logic Pro</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 60%;">Proficient</div>
+        </div>
+        <p>Sound design for multimedia</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 80%;">Advanced</div>
+        </div>
+        <p>Audio Editing</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 85%;">Advanced</div>
+        </div>
+        <p>Web Developement (html/css)</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 70%;">Proficient</div>
+        </div>
+        <p>Data Entry</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 85%;">Advanced</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   <a href="doc/AMANDA%20SWETA%20CV.pdf" class="button">My Résumé</a>
+   
+   <br><br><br><br><br><br><br>
+</section>
+
+<hr>
+
+<footer>
+  <div class="footer-column" id="contact">
+    <a href="https://www.google.com/maps/search/?api=1&query=B24+8PP%2C+Birmingham+UK" target="_blank">
+      <p>B24 8PP, Birmingham UK</p>
+    </a>
+  </div>
+  <div class="footer-column">
+    <div class="popup" onclick="myFunction()">
+      <img src ="images/rotary-phone.png" width=30px>
+      <span class="popuptext" id="myPopup">+44 7424305344</span>
+    </div>
+  </div>
+  <div class="footer-column">
+    <a href="mailto:amandasweta@gmail.com">
+      <img src="images/mail.png" alt="Email Icon" width=30px>
+    </a>
+  </div>
+   <div class="footer-column">
+   <a href="index.html">
+    <p>&copy; 2024 Amanda Sweta</p>
+    </a>
+  </div>
+</footer>
+
+<script>
+  // When the user clicks on <div>, open the popup
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+
+  function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function handleScroll() {
+    var aboutMeSection = document.querySelector('.about-me');
+    var educationSection = document.getElementById('education');
+    var skillsSection = document.getElementById('skills');
+
+    if (isInViewport(aboutMeSection)) {
+      aboutMeSection.classList.add('slide-from-right');
+    }
+
+    if (isInViewport(educationSection)) {
+      educationSection.classList.add('slide-from-left');
+    }
+
+    if (isInViewport(skillsSection)) {
+      skillsSection.classList.add('slide-from-right');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+</script>
+<script>
+    // JavaScript to change navbar color on scroll
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 0) {
+        header.style.backgroundColor = '#000'; // Change to black background
+      } else {
+        header.style.backgroundColor = 'transparent'; // Revert to transparent background
+      }
+    });
+  </script>
+
+</body>
+</html>
