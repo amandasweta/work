@@ -482,4 +482,14 @@ nav ul li a:hover::after {
     window.addEventListener('scroll', function() {
       const header = document.querySelector('header');
       if (window.scrollY > 0) {
-       
+        header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Change to black background with 60% opacity
+      } else {
+        header.style.backgroundColor = 'rgba(0, 0, 0, 0)'; // Revert to transparent background
+      }
+    });
+  </script>
+
+
+
+</body>
+</html>
