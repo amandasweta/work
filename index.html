@@ -13,24 +13,25 @@
   <title>Home page</title>
   <style> 
     body {
-      background-color: #f8f9fa; /* Soft gray for background */
-      color: #333; /* Dark gray for text */
-      background-color: #FFF3E0;
-    }
+      color: #fff; /* Dark gray for text */
+      background: url(images/5.gif);
+      background-size: cover;
+}
+
     .footer-column p {
-  margin-bottom: 5px;
+      margin-bottom: 5px;
     }
     .footer-column:hover {
-  transform: scale(1.1); /* Enlarge the footer content on hover */
+        transform: scale(1.1); /* Enlarge the footer content on hover */
         transition: 1s;
         cursor: pointer;
 }
-       header {
+      header {
       padding: 20px;
-      color: #FFF3E0;
+      color: #fff;
       padding: 40px;
-         position: fixed;
-        margin-top: 0px;
+      position: fixed;
+      margin-top: 0px;
       top: 0;
       left: 0;
       width: 100%;
@@ -38,7 +39,7 @@
     }
     
     nav ul li a {
-      color: #4682B4;
+      color: #fff;
       text-decoration: none;
       font-family: "Thasadith", sans-serif;
       letter-spacing: 1.5px;
@@ -68,16 +69,16 @@
 
     nav ul li a:hover::before {
       width: 100%; /* Expand the width to 100% on hover */
-      background-color:#4682B4;
+      background-color:#AAF1E9;
     }
 
     nav ul li a:hover::after {
       width: 100%; /* Expand the width to 100% on hover */
-      background-color: #4682B4;
+      background-color: #AAF1E9;
     }
 
     hr {
-      color:#4682B4;
+      color:#83DFD5;
       width: 90%;
       margin: 0 auto; /* Center the hr horizontally */
     }
@@ -90,7 +91,7 @@
       margin-right: 10px;
       border-radius: 50%; /* Makes the icons circular */
       padding: 10px; /* Adjust padding as needed */
-      color: #4682B4;
+      color: #fff;
       transition: transform 0.6s ease; /* Add transition for transform */
     }
 
@@ -102,9 +103,9 @@
        font-family: "Thasadith", sans-serif;
       text-align-last: center;
       background:none;
-      color: #4682B4;
+      color: #fff;
         letter-spacing: 1.5px;
-      padding: 60px;
+      padding: 30px;
       padding-left: 20px;
       display: flex;
       justify-content: space-between;
@@ -125,16 +126,45 @@
 
     a {
       text-decoration: none;
-      color: #4682B4;
+      color: #fff;
     }
       intro span{
           font-family: "Thasadith", sans-serif;
           font-size: 15px;
-          color: #4682B4;
+          color:#AAF1E9;
           letter-spacing: 3.5px;
           padding-left: 540px; 
       }
       
+      .video{
+      background: url(images/3.gif);
+      background-size: cover;
+      }
+      
+      .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 20px auto; /* Center the video container */
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      width: 900px;
+      height: 560px;
+        left: 250px;
+    }
+      .homepic {
+  width: 600px;
+  margin: 0 auto; /* Center horizontally */
+  display: block; /* Ensure the image is a block element */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+}
   </style>
 </head>
 <body>
@@ -148,8 +178,8 @@
     <nav>
       <ul>
         <li><a href="about.html">ABOUT</a></li>
-        <li><a href="work.html">WORK</a></li>
-        <li><a href="index.html#contact">CONTACT</a></li>
+        <li><a href="work2.html">WORK</a></li>
+        <li><a href="about.html#contact">CONTACT</a></li>
       </ul>
     </nav>
 
@@ -167,12 +197,20 @@
 <intro>
   <hh>AMANDA SWETA</hh>
   <span>SOUND DESIGNER - AUDIO EDITOR</span>
-</intro>
+    </intro>
+ </body>
+  
+    <br><br><br><br><br><br><br>
+     <img src="images/homepic2.png" class='homepic'>
+  
+  <div class="video">
+      <div class="video-container">
+  <iframe src="https://player.vimeo.com/video/952832164" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div> 
+  </div>
    
    
-   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <hr>
-
 <footer>
   <div class="footer-column" id="contact">
     <a href="https://www.google.com/maps/search/?api=1&query=B24+8PP%2C+Birmingham+UK" target="_blank">
@@ -215,6 +253,9 @@
       }
     });
   </script>
-
-</body>
+  
+  <script>
+    
+    
+</script>
 </html>
