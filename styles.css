@@ -1,0 +1,624 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier Prime", monospace;
+  background: url(images/background1.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
+  overflow-x: hidden; /* Add this line to hide horizontal scrollbar */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.homepic {
+  position: relative; /* Make the element a positioning context */
+  width: 100%;  /* Fills the width of the container */
+  height: 550px;   /* Sets a fixed height */
+  overflow: hidden; /* Ensures child elements do not overflow the container */
+}
+
+.homepic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/IMG2.HEIC') no-repeat center center/cover;
+  opacity: 1; /* Keep full opacity for the image */
+  z-index: -2; /* Ensure the image is behind any content within .homepic */
+    filter: grayscale(100%);
+}
+
+.homepic::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: -1; /* Ensure the overlay is above the image */
+}
+.homepic2 {
+  position: relative; /* Make the element a positioning context */
+  width: 100%;  /* Fills the width of the container */
+  height: 550px;   /* Sets a fixed height */
+  overflow: hidden; /* Ensures child elements do not overflow the container */
+}
+
+.homepic2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/ukelele.HEIC') no-repeat center center/cover;
+  opacity: 1; /* Keep full opacity for the image */
+  z-index: -2; /* Ensure the image is behind any content within .homepic */
+  filter: grayscale(100%);
+}
+
+.homepic2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: -1; /* Ensure the overlay is above the image */
+}
+.overlay-text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-family: "Codystar", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+.overlay-text2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+    width: 100%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-family: "Codystar", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center; /* Centers the logo */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0); /* Start with transparent background */
+  color: #fff;
+  z-index: 999; /* Ensures the header is above other content */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.9); /* White background with 90% opacity */
+}
+.logo {
+  top: 10px;
+  font-size: 35px;
+   font-family: "Nanum Pen Script", cursive;
+  letter-spacing: 3.5px;
+  position: absolute; /* Positions the logo absolutely */
+  left: 50%; /* Moves the logo 50% to the right */
+  transform: translateX(-50%); /* Centers the logo */
+  transition: color 0.3s ease; /* Smooth transition for logo color */
+}
+
+header.scrolled .logo {
+  color: #000; /* Change logo color to black */
+}
+
+nav {
+  position: absolute; /* Positions the navigation absolutely */
+  left: 0; /* Aligns the navigation to the left */
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: 30px; /* Add margin to move the social icons away from the edge */
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white; /* Initial color is white */
+  font-size: 17px;
+  transition: color 0.3s ease; /* Smooth transition for text color */
+  font-family: "Courier Prime", monospace;
+}
+
+header.scrolled nav ul li a {
+  color: black; /* Change text color to black when scrolled */
+}
+nav ul li a {
+  position: relative;
+  color: white; /* Initial text color */
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  animation: flicker 0.1s infinite alternate; /* Apply flicker animation on hover */
+}
+
+@keyframes flicker {
+  0% {
+    color: goldenrod; /* Start with goldenrod color */
+  }
+  50% {
+    color: white; /* Transition to white halfway through */
+  }
+  100% {
+    color: goldenrod; /* Transition back to goldenrod */
+  }
+}
+
+.social-icons {
+  position: absolute; /* Positions the social icons absolutely */
+  right: 0; /* Aligns the social icons to the right */
+  display: flex;
+  align-items: center;
+  margin-right: 30px; /* Add margin to move the social icons away from the edge */
+}
+
+.social-icons a {
+  color: white; /* Initial color is white */
+  font-size: 17px;
+  margin-left: 15px;
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+header.scrolled .social-icons a {
+  color: black; /* Change social icons color to black when scrolled */
+}
+
+.social-icons a:hover {
+ animation: flicker 0.1s infinite alternate; /* Apply flicker animation on hover */
+}
+
+h1{
+    position: absolute;
+    padding-left: 120px;
+    font-size: 25px;
+    padding-top: 90px;
+}
+h3{
+    position: absolute;
+    padding-left: 120px;
+    font-size: 25px;
+    padding-top: 50px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    background-color:#fff;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-left: 220px;
+    padding-right: 220px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+.image-wrapper {
+  position: relative;
+}
+.bio-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  padding: 50px;
+}
+.tape {
+  position: absolute;
+  width: 80px;
+  height: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Black color with 50% transparency */
+}
+.tape1 {
+  top: 60px;
+  left: 30px;
+  transform: rotate(-45deg);
+}
+.tape2 {
+  bottom: 60px;
+  right: 30px;
+  transform: rotate(-45deg);
+}
+.about-text {
+  flex: 1;
+  padding: 0 20px;
+}
+p {
+  margin: 10px 0;
+    font-size: 18px;
+    text-align-last:left;
+    line-height: 25px;
+}
+.container3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust spacing between columns */
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  padding: 20px;
+}
+
+.column3 {
+  flex-grow: 1; /* Allow columns to grow equally */
+  max-width: 300px; /* Limit maximum width of each column */
+  margin: 20px;
+  text-align: center;
+  color: #fff; /* White text color */
+}
+
+.column3 i {
+  font-size: 20px;
+}
+
+.column3 h2 {
+  margin-top: 10px;
+  font-size: 15px;
+    text-align-last: center;
+}
+
+.column3 p {
+  margin-top: 10px;
+  font-size: 14px;
+    text-align-last: center;
+}
+.form-container {
+  background: none;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 150px auto;
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+    font-family: "Courier Prime", monospace;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 5px;
+    font-family: "Courier Prime", monospace;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+button {
+  background-color: gray;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #fff; /* Add border */
+  border-radius: 5px;
+  cursor: pointer;
+     font-size: 15px;
+     font-family: "Courier Prime", monospace;
+    background-color: #fff;
+  color: #000;
+  border-color: #000; /* Change border color on hover */
+    transition: 0.5s;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff; /* Change border color on hover */
+}
+
+.container {
+      text-align: center;
+      margin-top: 10px; /* Add some margin for spacing */
+    }
+
+
+.picture {
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background-size: cover;
+  background-attachment: scroll;
+  filter: grayscale(100%);
+}
+
+.picture {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.picture video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  margin-bottom: 20px;
+}
+.column links {
+
+  margin-bottom: 20px;
+}
+column2 {
+  margin-bottom: 20px;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .column {
+    flex: 1 0 100%;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.links ul li {
+  margin-bottom: 10px;
+}
+
+.links ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.links ul li a:hover {
+  animation: flicker 0.1s infinite alternate; /* Apply flicker animation on hover */
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+a:hover{
+    animation: flicker 0.1s infinite alternate; /* Apply flicker animation on hover */
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 1px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.4); /* This will darken the image */
+}
+.gallery-item:hover .title {
+    opacity: 1;
+}
+    
+    .gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.4); /* This will darken the image */
+}
+
+.gallery-item a {
+    font-size: 15px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    background-color: #000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 400px;
+    display: flex;
+    color: #fff;
+}
+
+.modal-column {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-column iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-column h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.modal-column p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+}
+#spotify-iframe {
+    height: 470px; /* Adjust height as needed */
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure it behaves as a block-level element */
+}
+.gallery-item {
+    width: 100%; /* Ensure the gallery item takes up full width */
+}
+
+.gallery-item iframe {
+    width: 600px;
+        height: 300px;
+}
+
+#my-custom-btn {
+  bottom: 20px;
+  z-index: 99;
+  background:none;
+  color: #000;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  width: auto;
+  height: 0;
+  padding-left: 660px;
+    transition: 0.6s;
+}
+
+#my-custom-btn:hover {
+ color:darkgoldenrod;
+  
+}
+.animate {
+  opacity: 0;
+  transform: translateY(30px); /* Start from slightly below */
+  transition: opacity 1s ease, transform 2s ease;
+}
+
+.animate.active {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position */
+}
+
+.animate2 {
+  opacity: 0;
+  transform: translateX(30px); /* Start from slightly below */
+  transition: opacity 1s ease, transform 3s ease;
+}
+
+.animate2.active {
+  opacity: 1;
+  transform: translateX(0); /* Move to original position */
+}
+.animate3 {
+  opacity: 0;
+  transform: translateX(-30px); /* Start from slightly below */
+  transition: opacity 1s ease, transform 3s ease;
+}
+
+.animate3.active {
+  opacity: 1;
+  transform: translateX(0); /* Move to original position */
+}
+
